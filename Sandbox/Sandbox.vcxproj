@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FT_PLATFORM_WINDOWS;FT_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Flint\vendor\spdlog\include;..\Flint\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\FlintStoneEngine\vendor\spdlog\include;..\FlintStoneEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -95,7 +95,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FT_PLATFORM_WINDOWS;FT_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Flint\vendor\spdlog\include;..\Flint\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\FlintStoneEngine\vendor\spdlog\include;..\FlintStoneEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -111,7 +111,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FT_PLATFORM_WINDOWS;FT_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Flint\vendor\spdlog\include;..\Flint\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\FlintStoneEngine\vendor\spdlog\include;..\FlintStoneEngine\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -126,8 +126,8 @@
     <ClCompile Include="src\SandboxApp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Flint\Flint.vcxproj">
-      <Project>{A2B92E0D-0ECE-56BE-D74F-FA1D432353EF}</Project>
+    <ProjectReference Include="..\FlintStoneEngine\FlintStoneEngine.vcxproj">
+      <Project>{C1EAAFAC-ADE3-CEFE-D615-B483C26DAE0A}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

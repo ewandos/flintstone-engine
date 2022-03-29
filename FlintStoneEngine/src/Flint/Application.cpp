@@ -1,3 +1,4 @@
+#include "ftpch.h"
 #include "Application.h"
 
 #include "Flint/Events/ApplicationEvent.h"

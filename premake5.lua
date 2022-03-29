@@ -10,13 +10,16 @@ workspace "Flint"
 
 output_dir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-project "Flint"
-	location "Flint"
+project "FlintStoneEngine"
+	location "FlintStoneEngine"
 	kind "SharedLib"
 	language "C++"
 
 	targetdir ("bin/" .. output_dir .. "/%{prj.name}")
 	objdir ("bin-int/" .. output_dir .. "/%{prj.name}")
+
+	pchheader "ftpch.h"
+	pchsource "FlintStoneEngine/src/ftpch.cpp"
 
 	files
 	{
@@ -74,13 +77,13 @@ project "Sandbox"
 
 	includedirs
 	{
-		"Flint/vendor/spdlog/include",
-		"Flint/src"
+		"FlintStoneEngine/vendor/spdlog/include",
+		"FlintStoneEngine/src"
 	}
 
 	links
 	{
-		"Flint"
+		"FlintStoneEngine"
 	}
 
 	filter "system:windows"

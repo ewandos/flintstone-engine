@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Flint">
+      <UniqueIdentifier>{A2B92E0D-0ECE-56BE-D74F-FA1D432353EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flint\Events">
+      <UniqueIdentifier>{46FB628D-325E-F231-DBE3-2AE8C725BEB4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Flint.h" />
+    <ClInclude Include="src\Flint\Application.h">
+      <Filter>Flint</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\Core.h">
+      <Filter>Flint</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\EntryPoint.h">
+      <Filter>Flint</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\Events\ApplicationEvent.h">
+      <Filter>Flint\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\Events\Event.h">
+      <Filter>Flint\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\Events\KeyEvent.h">
+      <Filter>Flint\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\Events\MouseEvent.h">
+      <Filter>Flint\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\Log.h">
+      <Filter>Flint</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ftpch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Flint\Application.cpp">
+      <Filter>Flint</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Flint\Log.cpp">
+      <Filter>Flint</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ftpch.cpp" />
+  </ItemGroup>
+</Project>
