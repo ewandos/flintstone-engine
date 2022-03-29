@@ -4,6 +4,9 @@
     <Filter Include="Flint">
       <UniqueIdentifier>{A2B92E0D-0ECE-56BE-D74F-FA1D432353EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Flint\Events">
+      <UniqueIdentifier>{46FB628D-325E-F231-DBE3-2AE8C725BEB4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Flint.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Flint\EntryPoint.h">
       <Filter>Flint</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\Events\ApplicationEvent.h">
+      <Filter>Flint\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\Events\Event.h">
+      <Filter>Flint\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\Events\KeyEvent.h">
+      <Filter>Flint\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Flint\Events\MouseEvent.h">
+      <Filter>Flint\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Flint\Log.h">
       <Filter>Flint</Filter>
