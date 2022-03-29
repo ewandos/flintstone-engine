@@ -8,18 +8,28 @@ workspace "Flint"
 		"Dist"
 	}
 
-output_dir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- Include directories relative to root
+IncludeDir = {}
+IncludeDir["GLFW"] = "FlintStoneEngine/vendor/GLFW/include"
+
+include "FlintStoneEngine/vendor/GLFW"
 
 project "FlintStoneEngine"
 	location "FlintStoneEngine"
 	kind "SharedLib"
 	language "C++"
 
-	targetdir ("bin/" .. output_dir .. "/%{prj.name}")
-	objdir ("bin-int/" .. output_dir .. "/%{prj.name}")
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "ftpch.h"
 	pchsource "FlintStoneEngine/src/ftpch.cpp"
+
+	staticruntime "off"
+	runtime "Release"
+	buildoptions {"/MD"}
 
 	files
 	{
@@ -30,7 +40,14 @@ project "FlintStoneEngine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -46,7 +63,7 @@ project "FlintStoneEngine"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. output_dir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
@@ -66,8 +83,12 @@ project "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
 
-	targetdir ("bin/" .. output_dir .. "/%{prj.name}")
-	objdir ("bin-int/" .. output_dir .. "/%{prj.name}")
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	staticruntime "off"
+	runtime "Release"
+	buildoptions {"/MD"}
 
 	files
 	{

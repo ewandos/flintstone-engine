@@ -2,13 +2,13 @@
 #include "Application.h"
 
 #include "Flint/Events/ApplicationEvent.h"
-#include "Flint/Log.h"
+#include <GLFW/glfw3.h>
 
 
 namespace Flint {
 	Application::Application()
 	{
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -18,8 +18,10 @@ namespace Flint {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		FT_TRACE(e);
-		while (true);
+		while (m_Running) {
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
+		};
 	}
 }
